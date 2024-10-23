@@ -3,43 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Professional CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* تهيئة الصفحة الأساسية */
+    /* إعدادات عامة */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
     }
-    /* تهيئة الرأس */
+
+    /* إعدادات الرأس */
     header {
-      background-color: #f4f4f4;
-      padding: 20px;
+      background-color: #004d99;
+      padding: 30px;
       text-align: center;
-      border-bottom: 2px solid #ccc;
+      color: white;
+      border-bottom: 5px solid #0059b3;
+      animation: slideInDown 1s ease-out;
     }
 
     header h1 {
       margin-bottom: 10px;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
-    /* تنسيق الأقسام */
+    header p {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* تهيئة الأقسام */
     section {
       padding: 20px;
-      flex-grow: 1;
+      margin: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
     }
 
     h2 {
       margin-bottom: 10px;
+      color: #004d99;
+      font-size: 1.8rem;
     }
 
     ul {
@@ -49,22 +65,50 @@
 
     ul li {
       margin-bottom: 10px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
     }
 
-    /* الشريط السفلي */
+    /* تهيئة الأيقونات */
+    ul li i {
+      margin-right: 10px;
+      color: #004d99;
+      font-size: 1.2rem;
+    }
+
+    /* تهيئة الشريط السفلي */
     footer {
-      background-color: #f1f1f1;
+      background-color: #004d99;
       text-align: center;
-      padding: 10px;
-      border-top: 2px solid #ccc;
+      padding: 15px;
+      color: white;
+      border-top: 5px solid #0059b3;
       position: relative;
       bottom: 0;
       width: 100%;
+      animation: slideInUp 1s ease-out;
+    }
+
+    /* أنيميشن */
+    @keyframes slideInDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* الروابط */
     a {
-      color: #000;
+      color: #004d99;
       text-decoration: none;
     }
     
@@ -82,42 +126,27 @@
   <section id="contact">
     <h2>Contact Information</h2>
     <ul>
-      <li>Phone: +20 1067584119</li>
-      <li>Email: moaaz.tamer08@gmail.com</li>
+      <li><i class="fas fa-phone"></i> Phone: +20 1067584119</li>
+      <li><i class="fas fa-envelope"></i> Email: <a href="mailto:moaaz.tamer08@gmail.com">moaaz.tamer08@gmail.com</a></li>
     </ul>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <ul>
-      <li>
-        <strong>AbuZaabal Secondary School</strong> - Abu-Zaabal, Egypt (2022 - Present)
-      </li>
-      <li>
-        <strong>El-Nasser Salah El-Deen School</strong> - Abu-Zaabal, Egypt (2016 - 2022)
-      </li>
+      <li><i class="fas fa-school"></i> <strong>AbuZaabal Secondary School</strong> - Abu-Zaabal, Egypt (2022 - Present)</li>
+      <li><i class="fas fa-graduation-cap"></i> <strong>El-Nasser Salah El-Deen School</strong> - Abu-Zaabal, Egypt (2016 - 2022)</li>
     </ul>
   </section>
 
   <section id="experience">
     <h2>Work Experience</h2>
     <ul>
-      <li>
-        <strong>VR Game Design Virtual Pre-college Program Participant</strong> (June 2023 - July 2023)
+      <li><i class="fas fa-vr-cardboard"></i> <strong>VR Game Design Virtual Pre-college Program Participant</strong> (June 2023 - July 2023)
         <p>Created a VR game prototype and worked with a team of students. The project was featured in the program's showcase.</p>
       </li>
-      <li>
-        <strong>OBM Education Ambassador</strong> (Nov 2022 - Present)
+      <li><i class="fas fa-briefcase"></i> <strong>OBM Education Ambassador</strong> (Nov 2022 - Present)
         <p>Chosen as one of 310 ambassadors for OBM Education, fostering a connected community between students, educational institutions, and businesses while interning in OBM's programming team.</p>
-      </li>
-      <li>
-        <strong>Junior Academy Participant</strong> (Sep 2022 - May 2023)
-        <p>Developed 21st-century skills - leadership, communication, collaboration -and valuable research experience.</p>
-      </li>
-      <li>
-        <strong>MINT Incubator Program Intern</strong> (June 2022 - Sep 2022)
-        <p>Interned in the MINT Incubator program, learning from its unique approach to supporting early-stage startup
-businesses without requiring equity or debt.</p>
       </li>
     </ul>
   </section>
@@ -125,76 +154,9 @@ businesses without requiring equity or debt.</p>
   <section id="honors">
     <h2>Honors</h2>
     <ul>
-      <li>
-        <strong>International Telecommunications Conference ITC-Egypt 2023</strong> (July 2023)
+      <li><i class="fas fa-trophy"></i> <strong>International Telecommunications Conference ITC-Egypt 2023</strong> (July 2023)
         <p>Fifth place among 500 applicants, held at Air Defense College.</p>
       </li>
-      <li>
-        <strong>Climathon Egypt Series</strong> (November 2022)
-        <p>Second place among 100 finalist applicants, one of COP27 competitions issued by the European Union.</p>
-      </li>
-      <li>
-        <strong>IEEE YESIST 12 (Junior Einstein)</strong> (September 2022)
-        <p>Top 35 finalist teams from 3500 applicants globally in an international competition for young scientists.</p>
-      </li>
-      <li>
-        <strong>Climate Science Olympiad (CSO22)</strong> (September 2022)
-        <p>Semi-finalist and top 10% in the competition, issued by Climate Science Olympiad.</p>
-      </li>
-</ul>
-  </section>
-
-  <section id="Activities">
-    <h2>Activities</h2>
-    <ul>
-
-      <li>
-        <strong>Resala STEM Volunteer</strong> (February 2023 - Present)
-        <p>Instructor at a school summer camp program for G10 students.</p>
-      </li>
-      <li>
-        <strong>TEDx Red Sea Youth STEM (PR Specialist)</strong> (October 2022)
-        <p>Public relations specialist in the TEDx event focusing on youth and STEM education.</p>
-      </li>
-      <li>
-        <strong>Electrics Physics Club (Head PR)</strong> (February 2022 - August 2022)
-        <p>Head of public relations in a club focused on electronics and physics projects.</p>
-      </li>
-      <li>
-        <strong>Instilt Education Instructor</strong> (February 2022 - June 2023)
-        <p>Worked as an instructor, providing educational services for students.</p>
-      </li>
-      <li>
-        <strong>Solution of the Journey</strong> (June 2023)
-        <p>Developed solutions to problems presented as part of the project.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="competitions">
-    <h2>Competitions</h2>
-    <ul>
-      <li>
-        <strong>ISIEC Competition 2024</strong> (May 2024)
-        <p>Participated in the International Science and Engineering Innovation Competition.</p>
-      </li>
-      <li>
-        <strong>NASA Space Apps Cairo 2023</strong> (October 2023)
-        <p>Fifth place among 1000 applicants. Finalist among 2000 applicants in the NASA Space Apps challenge, held at Air Defense College.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python (Beginner)</li>
-      <li>C, C++, HTML/CSS (Beginner)</li>
-      <li>Advanced in Arduino C</li>
-      <li>Leadership, Teamwork, Communication</li>
-      <li>Time Management, Project Management</li>
-      <li>Public Speaking, Decision Making</li>
-      <li>Problem Solving, Critical Thinking</li>
     </ul>
   </section>
 
