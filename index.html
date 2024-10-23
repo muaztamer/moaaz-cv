@@ -12,50 +12,52 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f4f8;
-      color: #333;
+      transition: all 0.3s ease-in-out;
     }
 
     /* إعدادات الرأس */
     header {
-      background-color: #004d99;
-      padding: 30px;
-      text-align: center;
+      background-color: #0f4c81;
       color: white;
-      border-bottom: 5px solid #0059b3;
-      animation: slideInDown 1s ease-out;
+      text-align: center;
+      padding: 50px 0;
+      border-bottom: 5px solid #0c3a63;
+      animation: fadeIn 2s ease-out;
     }
 
     header h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
-      font-size: 2.5rem;
     }
 
     header p {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.5rem;
+      font-weight: 300;
     }
 
-    /* تهيئة الأقسام */
+    /* إعدادات الأقسام */
     section {
-      padding: 20px;
+      padding: 40px 20px;
       margin: 20px;
       background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-out;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease-out;
     }
 
-    h2 {
-      margin-bottom: 10px;
-      color: #004d99;
-      font-size: 1.8rem;
+    section h2 {
+      font-size: 2rem;
+      color: #0f4c81;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
     ul {
@@ -64,70 +66,96 @@
     }
 
     ul li {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
       display: flex;
       align-items: center;
-    }
-
-    /* تهيئة الأيقونات */
-    ul li i {
-      margin-right: 10px;
-      color: #004d99;
       font-size: 1.2rem;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
     }
 
-    /* تهيئة الشريط السفلي */
-    footer {
-      background-color: #004d99;
-      text-align: center;
-      padding: 15px;
-      color: white;
-      border-top: 5px solid #0059b3;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      animation: slideInUp 1s ease-out;
+    ul li:hover {
+      transform: translateX(10px);
     }
 
-    /* أنيميشن */
-    @keyframes slideInDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes slideInUp {
-      from { transform: translateY(100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* أيقونات */
+    ul li i {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: #0f4c81;
     }
 
     /* الروابط */
     a {
-      color: #004d99;
+      color: #0f4c81;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-    
+
     a:hover {
-      text-decoration: underline;
+      color: #0c3a63;
+    }
+
+    /* الشريط السفلي */
+    footer {
+      background-color: #0f4c81;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* أنيميشن */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 60px 40px;
+      }
+
+      ul li {
+        font-size: 1.4rem;
+      }
+
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header p {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Moaaz Mohamed Tamer Ibrahim</h1>
-    <p>Student</p>
+    <p>Professional CV</p>
   </header>
 
   <section id="contact">
     <h2>Contact Information</h2>
     <ul>
       <li><i class="fas fa-phone"></i> Phone: +20 1067584119</li>
-      <li><i class="fas fa-envelope"></i> Email:&nbsp;  <a href="mailto:moaaz.tamer08@gmail.com">moaaz.tamer08@gmail.com</a></li>
+      <li><i class="fas fa-envelope"></i> Email: <a href="mailto:moaaz.tamer08@gmail.com">moaaz.tamer08@gmail.com</a></li>
     </ul>
   </section>
 
@@ -142,17 +170,11 @@
   <section id="experience">
     <h2>Work Experience</h2>
     <ul>
-      <li><i class="fas fa-vr-cardboard"></i> <strong>VR Game Design Virtual Pre-college Program</strong> (June 2023 - July 2023)&nbsp;
+      <li><i class="fas fa-vr-cardboard"></i> <strong>VR Game Design Virtual Pre-college Program</strong> (June 2023 - July 2023)
         <p>Created a VR game prototype and worked with a team of students. The project was featured in the program's showcase.</p>
       </li>
-      <li><i class="fas fa-briefcase"></i> <strong>OBM Education Ambassador &nbsp;</strong> (Nov 2022 - Present)&nbsp;
+      <li><i class="fas fa-briefcase"></i> <strong>OBM Education Ambassador</strong> (Nov 2022 - Present)
         <p>Chosen as one of 310 ambassadors for OBM Education, fostering a connected community between students, educational institutions.</p>
-      </li>
-      <li><i class="fas fa-user-graduate"></i> <strong>Junior Academy Participant &nbsp;</strong>  (Sep 2022 - May 2023)&nbsp;
-         <p>Developed 21st-century skills - leadership, communication, collaboration - and valuable research experience.</p>
-      </li>
-      <li><i class="fas fa-rocket"></i> <strong>EG-MINT Program &nbsp;</strong> (June 2022 - Sep 2022)&nbsp;
-        <p>Interned in the MINT Incubator program, learning from its unique approach to supporting early-stage startup businesses.</p>
       </li>
     </ul>
   </section>
@@ -160,50 +182,14 @@
   <section id="honors">
     <h2>Honors</h2>
     <ul>
-      <li><i class="fas fa-trophy"></i> <strong>International Telecommunications Conference ITC-Egypt 2023 &nbsp;</strong>  (July 2023)&nbsp;
-         <p>Fifth place among 500 applicants, held at Air Defense College.</p>
+      <li><i class="fas fa-trophy"></i> <strong>International Telecommunications Conference ITC-Egypt 2023</strong> (July 2023)
+        <p>Fifth place among 500 applicants, held at Air Defense College.</p>
       </li>
-      <li><i class="fas fa-medal"></i> <strong>Climathon Egypt Series &nbsp;</strong>  (November 2022)&nbsp;
-         <p>Second place among 100 finalist applicants, one of COP27 competitions issued by the European Union.</p>
-      </li>
-      <li><i class="fas fa-award"></i> <strong>IEEE YESIST 12 (Junior Einstein) &nbsp;</strong>  (September 2022)&nbsp;
-         <p>Top 35 finalist teams from 3500 applicants globally in an international competition for young scientists.</p>
-      </li>
-      <li><i class="fas fa-globe"></i> <strong>Climate Science Olympiad (CSO22) &nbsp;</strong>  (September 2022)&nbsp;
-         <p>Semi-finalist and top 10% in the competition, issued by Climate Science Olympiad.</p>
-     </li>
-       <li><i class="fas fa-trophy"></i> <strong>ISIEC Competition 2024 &nbsp;</strong>  (May 2024)&nbsp;
-        <p>Participated in the International Science and Engineering Innovation Competition.</p>
-      </li>
-      <li><i class="fas fa-space-shuttle"></i> <strong>NASA Space Apps Cairo 2023 &nbsp;</strong>  (October 2023)&nbsp;
-        <p>Fifth place among 1000 applicants. Finalist among 2000 applicants in the NASA Space Apps challenge, held at Air Defense College.</p>
+      <li><i class="fas fa-medal"></i> <strong>Climathon Egypt Series</strong> (November 2022)
+        <p>Second place among 100 finalists, part of COP27 competitions issued by the European Union.</p>
       </li>
     </ul>
   </section>
-
-  <section id="Activities">
-    <h2>Activities</h2>
-    <ul>
-      <li><i class="fas fa-hands-helping"></i> <strong>Resala STEM Volunteer &nbsp;</strong>  (February 2023 - Present)&nbsp;
-        <p>Instructor at a school summer camp program for G10 students.</p>
-      </li>
-      <li><i class="fas fa-bullhorn"></i> <strong>TEDx Red Sea Youth STEM (PR Specialist) &nbsp;</strong>  (October 2022)&nbsp;
-        <p>Public relations specialist in the TEDx event focusing on youth and STEM education.</p>
-      </li>
-      <li><i class="fas fa-microchip"></i> <strong>Electrics Physics Club (Head PR) &nbsp;</strong>  (February 2022 - August 2022)&nbsp;
-        <p>Head of public relations in a club focused on electronics and physics projects.</p>
-      </li>
-      <li><i class="fas fa-chalkboard-teacher"></i> <strong>Instilt Education Instructor &nbsp;</strong>  (February 2022 - June 2023)&nbsp;
-        <p>Worked as an instructor, providing educational services for students.</p>
-      </li>
-      <li><i class="fas fa-lightbulb"></i> <strong>Solution of the Journey&nbsp;</strong>  (June 2023)&nbsp;
-        <p>Developed solutions to problems presented as part of the project.</p>
-      </li>
-    </ul>
-  </section>
-
-  
-     
 
   <section id="skills">
     <h2>Skills</h2>
@@ -212,9 +198,6 @@
       <li><i class="fas fa-laptop-code"></i> C, C++, HTML/CSS (Beginner)</li>
       <li><i class="fas fa-microchip"></i> Advanced in Arduino C</li>
       <li><i class="fas fa-users"></i> Leadership, Teamwork, Communication</li>
-      <li><i class="fas fa-tasks"></i> Time Management, Project Management</li>
-      <li><i class="fas fa-comments"></i> Public Speaking, Decision Making</li>
-      <li><i class="fas fa-brain"></i> Problem Solving, Critical Thinking</li>
     </ul>
   </section>
 
